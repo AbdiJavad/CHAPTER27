@@ -183,7 +183,7 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
     }
 
     private int hash(int hashCode) {
-        return supplementalHash(hashCode) & (capacity −1);
+        return supplementalHash(hashCode) & (capacity -1);
     }
 
     private static int supplementalHash(int h) {
@@ -199,7 +199,7 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
             return capacity;
         }
 
-        private void removeEntries () {
+        private void removeEntries() {
             for (int i = 0; i < capacity; i++) {
                 if (table[i] != null) {
                     table[i].clear();
@@ -207,7 +207,7 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
             }
         }
 
-        private void rehash () {
+        private void rehash() {
             java.util.Set<Entry<K, V>> set = entrySet();
             capacity <<= 1;
             table = new LinkedList[capacity];
